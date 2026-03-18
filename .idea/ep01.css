@@ -1,0 +1,116 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.app-screen {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    padding: 60px 20px 30px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: -28px;
+    letter-spacing: 4px;
+    border-bottom: 2px solid #1a1a1a;
+    color: #fff;
+
+    /* 初始紫光 */
+    text-shadow:
+            0 0 5px rgba(138, 43, 226, 0.8),
+            0 0 10px rgba(138, 43, 226, 0.5),
+            0 0 20px rgba(138, 43, 226, 0.2);
+
+    /* 修正動畫名稱為 purpleGlow */
+    animation: purpleGlow 4s ease-in-out infinite alternate;
+}
+
+/* 呼吸燈動畫設定 */
+@keyframes purpleGlow {
+    from {
+        text-shadow: 0 0 5px rgba(138, 43, 226, 0.6), 0 0 10px rgba(138, 43, 226, 0.3);
+    }
+    to {
+        text-shadow: 0 0 10px rgba(138, 43, 226, 0.9), 0 0 20px rgba(138, 43, 226, 0.5);
+    }
+}
+
+.content-area {
+    flex: 1;             /* 讓它佔滿畫面剩下的空間 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;         /* 確保寬度也是滿的 */
+    min-height: 200px;   /* 保底高度，防止它縮起來 */
+}
+
+/* --- 懸浮視窗相關 --- */
+.floating-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-box {
+    background: #111;
+    border: 1px solid #333;
+    padding: 30px;
+    width: 85%;
+    max-width: 320px;
+    text-align: center;
+}
+
+/* 統一 textarea 樣式 */
+textarea {
+    width: 100%;
+    background: #000;
+    border: 1px solid #222;
+    color: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    resize: none;
+    text-align: center;
+}
+
+.btn-group { display: flex; gap: 10px; }
+.close-btn, .confirm-btn {
+    flex: 1;
+    padding: 12px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.close-btn { background: transparent; color: #666; }
+.confirm-btn { background: #fff; color: #000; font-weight: bold; }
+
+/* --- 商品內容 --- */
+.product-item {
+    background: #111;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #222;
+    margin-bottom: 410px;
+}
+
+.icon { font-size: 25px; margin-bottom: 15px; }
+.name { font-size: 30px; margin-bottom: 8px; }
+.price { color: #666; font-size: 15px; }

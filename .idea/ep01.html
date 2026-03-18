@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>靈魂小舖</title>
+    <link rel="stylesheet" href="ep01.css">
+</head>
+<body>
+
+<div class="app-screen" id="mainPage">
+    <div class="header">靈魂小舖</div>
+
+    <div class="content-area" id="triggerArea">
+        <div class="product-item" id="itemBtn">
+            <div class="icon">🔘</div>
+            <div class="info">
+                <div class="name">回收不幸</div>
+                <div class="price">價格:1元</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="floating-overlay" id="floatingModal">
+    <div class="modal-box">
+        <p>把今天最慘的事情告訴我</p>
+        <p>我會幫你回收</p>
+        <textarea id="soulInput" placeholder="在此輸入..."></textarea>
+        <div class="btn-group">
+            <button class="close-btn" id="cancelBtn">退回</button>
+            <button class="confirm-btn" id="submitBtn">交易</button>
+        </div>
+    </div>
+</div>
+
+<div class="floating-overlay" id="successModal">
+    <div class="modal-box">
+        <h3 style="margin-top: 10;">交易成功。</h3>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
