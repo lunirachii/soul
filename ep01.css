@@ -137,11 +137,30 @@ textarea {
 
 @media (max-width: 768px) {
     .content-area {
-        padding-bottom: 250px;      /* 使用 vh 單位，代表螢幕高度的 15% */
+        display: flex;
+        /* 1. 靠上對齊 */
+        align-items: flex-start;
+        justify-content: center;
+
+        /* 2. 這是關鍵距離：從頂部往下推 40px */
+        /* 如果覺得還是太高，就把 40px 改成 60px */
+        /* 如果覺得還是太低，就把 40px 改成 20px */
+        padding-top: 40px;
+
+        /* 確保底部沒有多餘的空間撐開 */
+        padding-bottom: 0;
+        flex: 1;
     }
 
     .header {
-        font-size: 32px;        /* 順便縮小一點手機版的店名，避免太擠 */
-        padding-top: 53px;
+        font-size: 32px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .product-item {
+        /* 稍微縮小一點，讓手機版上方空間看起來更多 */
+        transform: scale(0.9);
+        margin-top: 0;
     }
 }
