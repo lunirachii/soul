@@ -55,6 +55,7 @@ body, html {
     cursor: pointer;
     width: 100%;         /* 確保寬度也是滿的 */
     min-height: 200px;   /* 保底高度，防止它縮起來 */
+
 }
 
 /* --- 懸浮視窗相關 --- */
@@ -128,9 +129,20 @@ textarea {
     display: flex;
     flex-direction: column;
     border: 1px solid #222;
-    margin-bottom: 100px;
 }
 
 .icon { font-size: 25px; margin-bottom: 15px; }
 .name { font-family: 'Noto Serif TC', serif;font-size: 1.5rem; margin-bottom: 8px; }
 .price { color: #666; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .content-area {
+        align-items: flex-start; /* 改為靠上對齊 */
+        padding-top: 15vh;      /* 使用 vh 單位，代表螢幕高度的 15% */
+    }
+
+    .header {
+        font-size: 32px;        /* 順便縮小一點手機版的店名，避免太擠 */
+        padding-top: 50px;
+    }
+}
