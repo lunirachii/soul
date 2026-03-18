@@ -137,12 +137,11 @@ textarea {
 
 @media (max-width: 768px) {
     .content-area {
-        align-items: flex-start; /* 改為靠上對齊 */
-        padding-top: 15vh;      /* 使用 vh 單位，代表螢幕高度的 15% */
+        padding-top: 30vh;      /* 使用 vh 單位，代表螢幕高度的 15% */
     }
 
     .header {
         font-size: 32px;        /* 順便縮小一點手機版的店名，避免太擠 */
-        padding-top: 50px;
+        padding-top: 53px;
     }
 }
