@@ -17,8 +17,8 @@ body, html {
 }
 
 .header {
-    padding: 60px 20px 30px;
-    font-size: 40px;
+    padding: 40px 10px 25px;
+    font-size: clamp(24px, 8vw, 40px);
     font-weight: bold;
     margin-top: -28px;
     letter-spacing: 4px;
@@ -71,7 +71,7 @@ body, html {
     background: #111;
     border: 1px solid #333;
     padding: 30px;
-    width: 85%;
+    width: 90%;
     max-width: 320px;
     text-align: center;
 }
@@ -79,6 +79,7 @@ body, html {
 /* 統一 textarea 樣式 */
 textarea {
     width: 100%;
+    font-size: 16px;
     background: #000;
     border: 1px solid #222;
     color: #fff;
@@ -103,8 +104,8 @@ textarea {
 .product-item {
     background: #111;
     padding: 30px;
-    width: 100%;
-    max-width: 400px;
+    width: 90%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     border: 1px solid #222;
@@ -112,5 +113,5 @@ textarea {
 }
 
 .icon { font-size: 25px; margin-bottom: 15px; }
-.name { font-size: 30px; margin-bottom: 8px; }
-.price { color: #666; font-size: 15px; }
+.name { font-size: 1.5rem; margin-bottom: 8px; }
+.price { color: #666; font-size: 0.9rem; }

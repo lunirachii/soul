@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/靈魂小舖.iml" filepath="$PROJECT_DIR$/.idea/靈魂小舖.iml" />
+      <module fileurl="file://$PROJECT_DIR$/靈魂小舖.iml" filepath="$PROJECT_DIR$/靈魂小舖.iml" />
     </modules>
   </component>
 </project>
