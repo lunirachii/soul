@@ -1,3 +1,6 @@
+* {
+    font-family: 'Noto Serif TC', serif !important;
+}
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 body, html {
@@ -47,7 +50,7 @@ body, html {
 }
 
 .content-area {
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Serif TC', serif !important;;
     flex: 1;             /* 讓它佔滿畫面剩下的空間 */
     display: flex;
     justify-content: center;
@@ -71,7 +74,7 @@ body, html {
 }
 
 p {
-    font-family: 'Noto Serif TC', serif; /* 確保 P 也改了 */
+    font-family: 'Noto Serif TC', serif !important; /* 確保 P 也改了 */
     font-size: 15px;
     color: #bbb;
     letter-spacing: 2px;
@@ -88,7 +91,7 @@ p {
     text-align: center;
 }
 .modal-box h3 {
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Serif TC', serif !important;
     font-weight: 900;
     letter-spacing: 2px;
     color: #fff;
@@ -96,7 +99,7 @@ p {
 
 /* 統一 textarea 樣式 */
 textarea {
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Serif TC', serif !important;
     width: 100%;
     font-size: 16px;
     background: #000;
@@ -111,7 +114,7 @@ textarea {
 
 .btn-group { display: flex; gap: 10px; }
 .close-btn, .confirm-btn {
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Serif TC', serif !important;
     flex: 1;
     padding: 12px;
     cursor: pointer;
@@ -132,7 +135,7 @@ textarea {
 }
 
 .icon { font-size: 25px; margin-bottom: 15px; }
-.name { font-family: 'Noto Serif TC', serif;font-size: 1.5rem; margin-bottom: 8px; }
+.name { font-family: 'Noto Serif TC', serif !important;font-size: 1.5rem; margin-bottom: 8px; }
 .price { color: #666; font-size: 0.9rem; }
 
 @media (max-width: 768px) {
