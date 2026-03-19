@@ -1,0 +1,195 @@
+* {
+    font-family: 'Noto Serif TC', serif !important;
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.app-screen {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header {
+    font-family: 'Noto Serif TC', serif;
+    padding: 40px 10px 25px;
+    font-size: clamp(24px, 8vw, 40px);
+    font-weight: bold;
+    margin-top: -25px;
+    letter-spacing: 4px;
+    border-bottom: 2px solid #1a1a1a;
+    color: #fff;
+
+    /* 初始紫光 */
+    text-shadow:
+            0 0 5px rgba(138, 43, 226, 0.8),
+            0 0 10px rgba(138, 43, 226, 0.5),
+            0 0 20px rgba(138, 43, 226, 0.2);
+
+    /* 修正動畫名稱為 purpleGlow */
+    animation: purpleGlow 4s ease-in-out infinite alternate;
+}
+
+/* 呼吸燈動畫設定 */
+@keyframes purpleGlow {
+    from {
+        text-shadow: 0 0 5px rgba(138, 43, 226, 0.6), 0 0 10px rgba(138, 43, 226, 0.3);
+    }
+    to {
+        text-shadow: 0 0 10px rgba(138, 43, 226, 0.9), 0 0 20px rgba(138, 43, 226, 0.5);
+    }
+}
+
+.content-area {
+    font-family: 'Noto Serif TC', serif !important;;
+    flex: 1;             /* 讓它佔滿畫面剩下的空間 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;         /* 確保寬度也是滿的 */
+    min-height: 200px;   /* 保底高度，防止它縮起來 */
+
+}
+
+/* --- 懸浮視窗相關 --- */
+.floating-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+p {
+    font-family: 'Noto Serif TC', serif !important; /* 確保 P 也改了 */
+    font-size: 15px;
+    color: #bbb;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+
+.modal-box {
+    background: #111;
+    border: 1px solid #333;
+    padding: 30px;
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+}
+.modal-box h3 {
+    font-family: 'Noto Serif TC', serif !important;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.modal-box p {
+    font-family: 'Noto Serif TC', serif !important;
+    margin-bottom: 40px !important; /* 數字越大，空白越多 */
+    line-height: 1.6;
+}
+
+/* 統一 textarea 樣式 */
+textarea {
+    font-family: 'Noto Serif TC', serif !important;
+    width: 100%;
+    font-size: 16px;
+    background: #000;
+    border: 1px solid #222;
+    color: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    resize: none;
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;       /* 兩個按鈕之間的左右間距 */
+    margin-top: 30px !important; /* 按鈕與上方文字的垂直間距 */
+}
+.close-btn, .confirm-btn {
+    font-family: 'Noto Serif TC', serif !important;
+    flex: 1;
+    padding: 12px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.close-btn { background: transparent; color: #666; }
+.confirm-btn { background: #fff; color: #000; font-weight: bold; }
+
+/* --- 商品內容 --- */
+.product-item {
+    background: #111;
+    padding: 30px;
+    width: 90%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #222;
+}
+
+.icon { font-size: 25px; margin-bottom: 15px; }
+.name { font-family: 'Noto Serif TC', serif !important;font-size: 1.5rem; margin-bottom: 8px; }
+.price { color: #666; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .content-area {
+        display: flex;
+        /* 1. 靠上對齊 */
+        align-items: flex-start;
+        justify-content: center;
+
+        /* 2. 這是關鍵距離：從頂部往下推 40px */
+        /* 如果覺得還是太高，就把 40px 改成 60px */
+        /* 如果覺得還是太低，就把 40px 改成 20px */
+        padding-top: 40px;
+
+        /* 確保底部沒有多餘的空間撐開 */
+        padding-bottom: 0;
+        flex: 1;
+    }
+
+    .header {
+        font-size: 32px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .product-item {
+        /* 稍微縮小一點，讓手機版上方空間看起來更多 */
+        transform: scale(0.9);
+        margin-top: 0;
+    }
+}
+
+.floating-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+
+    /* 關鍵：預設一定要是 none，否則會擋住點擊 */
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
